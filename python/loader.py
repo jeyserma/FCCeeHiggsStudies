@@ -18,4 +18,4 @@ _pod  = ROOT.podio.ObjectID()
 _fcc  = ROOT.dummyLoader
 
 print ("Load custom cxx analyzers ... ")
-if "/functions.so" not in ROOT.gSystem.GetLibraries(): ROOT.gSystem.CompileMacro("macros/functions.cc", "k")
+if "/functions.so" not in ROOT.gSystem.GetLibraries(): ROOT.gSystem.CompileMacro(os.path.dirname(__file__) + "/../macros/functions.cc", "k")
